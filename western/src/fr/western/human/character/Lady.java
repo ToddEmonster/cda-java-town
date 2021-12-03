@@ -9,7 +9,7 @@ public class Lady extends Human {
 
     // CONSTRUCTORS
     public Lady(String name) {
-        super(name);
+        super(name, "milk");
         this.isCaptive = false;
         this.dressColor = "blue";
     }

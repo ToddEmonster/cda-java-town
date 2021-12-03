@@ -11,18 +11,20 @@ public class Story {
         // 1.2
 
         Cowboy lukyLuke = new Cowboy("Luky Luke", "Beer", "Fastest shooter in the world" );
-        Lady marianne = new Lady("Marianne", "Mojito", "Red");
+        Lady marianne = new Lady("Marianne");
         Brigand dalton = new Brigand("Joe Dalton", "Pepsi");
 
 
         System.out.println(lukyLuke.introduce());
-        System.out.println(lukyLuke.talk(lukyLuke.drink()));
         System.out.println(marianne.introduce());
+        System.out.println(marianne.drink());
         System.out.println(dalton.introduce());
         System.out.println(dalton.kidnap(marianne));
         System.out.println(lukyLuke.shoot(dalton));
         System.out.println(dalton.getCatch(lukyLuke));
         System.out.println(lukyLuke.freeLady(marianne));
         System.out.println(marianne.thankFull(lukyLuke));
+
+
     }
 }

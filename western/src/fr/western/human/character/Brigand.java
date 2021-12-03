@@ -12,7 +12,7 @@ public class Brigand extends Human {
 
 // CONSTRUCTORS
     public Brigand(String name) {
-        super(name);
+        super(name, "twist casings");
         this.look = "Bad";
         this.wantedReward = 100f;
         this.isInJail = false;
@@ -78,6 +78,9 @@ public class Brigand extends Human {
     }
 
     public String introduce(){
-        return this.talk("I'm " + this.getName() + " the " + this.getLook() +".") ;
+        return (this.talk("I'm " + this.getName() + " the " + this.getLook() +".\n") +
+        this.talk(" I'm looking " + this.getLook() + " and I already kidnapped " + this.capturedLadiesCount + " ladies.\n")
+        + (this.talk("My head is rewarded for " + this.wantedReward + "$")));
     }
+
 }
