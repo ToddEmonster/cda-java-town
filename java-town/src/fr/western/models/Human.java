@@ -1,8 +1,8 @@
 package fr.western.models;
 
 public class Human {
-    private String name;
-    private String favoriteDrink = "WATAH";
+    protected String name;
+    protected String favoriteDrink = "WATAH";
 
     public Human(String name) {
         this.name = name;
@@ -31,6 +31,6 @@ public class Human {
 
     public void drink() {
         this.talk("Aaah ! Un bon verre de " + this.favoriteDrink
-            + "! GLOUPS !");
+            + " ! GLOUPS !");
     }
 }
