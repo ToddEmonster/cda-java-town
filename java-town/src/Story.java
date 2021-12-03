@@ -58,19 +58,21 @@ public class Story {
 
     private static void testBrigand() {
         System.out.println("\n");
-        Brigand joe = new Brigand("Joe Dalton");
-        Brigand william = new Brigand("William Dalton", "cool" );
-        Brigand jack = new Brigand("Jack Dalton", 300);
+        Brigand joy = new Brigand("Joy Dalton");
+        Brigand will = new Brigand("Will Dalton", "cool" );
+        Brigand jackie = new Brigand("Jackie Dalton", 300);
         Brigand averell = new Brigand("Averell Dalton", "gentil", 50, true);
 
         Brigand miaouss = new Brigand("Miaouss Team Rocket", true);
 
-        System.out.println(joe + "\n" + william + "\n" + jack + "\n" + averell + "\n" + miaouss);
+        System.out.println(joy + "\n" + will + "\n" + jackie + "\n" + averell + "\n" + miaouss);
+
+        System.out.println(joy.getName());
 
         Brigand janet = new Brigand("Calamity Janet", 1000);
         Sir sacha = new Sir("Sacha Ketchum");
         Cowgirl jessie = new Cowgirl("Jessie James");
-        System.out.println("Pour Jessie : " + janet.getReward() + " $");
+        System.out.println("Pour la tête de Jessie : " + janet.getReward() + " $");
         janet.kidnap(sacha);
         janet.getCapturedBy(jessie);
     }

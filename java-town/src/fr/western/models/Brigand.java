@@ -6,7 +6,7 @@ public class Brigand extends Human {
     private boolean isInJail;
 
     public Brigand(String name) {
-        this(name, "méchant", 100, false);
+        this(name, "méchante", 100, false);
     }
 
     public Brigand(String name, String look) {
@@ -14,11 +14,11 @@ public class Brigand extends Human {
     }
 
     public Brigand(String name, int reward) {
-        this(name, "méchant", reward, false);
+        this(name, "méchante", reward, false);
     }
 
     public Brigand(String name, boolean isInJail) {
-        this(name, "méchant", 100, isInJail);
+        this(name, "méchante", 100, isInJail);
     }
 
     public Brigand(String name, String look, int reward) {
@@ -30,7 +30,7 @@ public class Brigand extends Human {
     }
 
     public Brigand(String name, int reward, boolean isInJail) {
-        this(name, "méchant", reward, isInJail);
+        this(name, "méchante", reward, isInJail);
     }
 
     public Brigand(String name, String look, int reward, boolean isInJail) {
@@ -42,6 +42,10 @@ public class Brigand extends Human {
 
     public int getReward() {
         return reward;
+    }
+
+    public String getName() {
+        return this.name + " la " + this.look;
     }
 
     public void kidnap(Sir victim) {

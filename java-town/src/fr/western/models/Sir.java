@@ -35,6 +35,10 @@ public class Sir extends Human {
         return isCaptive;
     }
 
+    public String getName() {
+        return "Damoiseau " + this.name;
+    }
+
     public void getKidnapped() {
         this.isCaptive = true;
         this.talk("AU SECOUUUUURS !!!");
