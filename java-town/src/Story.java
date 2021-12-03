@@ -1,6 +1,4 @@
-import fr.western.models.Brigand;
-import fr.western.models.Human;
-import fr.western.models.Sieur;
+import fr.western.models.*;
 
 import java.util.Scanner;
 
@@ -69,10 +67,22 @@ public class Story {
 
         System.out.println(joe + "\n" + william + "\n" + jack + "\n" + averell + "\n" + miaouss);
 
-
+        Brigand janet = new Brigand("Calamity Janet", 1000);
+        Sieur sacha = new Sieur("Sacha Ketchum");
+        Cowgirl jessie = new Cowgirl("Jessie James");
+        System.out.println("Pour Jessie : " + janet.getReward() + " $");
+        janet.kidnap(sacha);
+        janet.getCapturedBy(jessie);
     }
 
     private static void testCowgirl() {
         System.out.println("\n");
+        Cowgirl jessie = new Cowgirl("Jessie James");
+        Cowgirl lucky = new Cowgirl("Lucky Luke");
+
     }
+
+
+
+
 }

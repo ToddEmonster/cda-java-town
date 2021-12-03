@@ -40,6 +40,20 @@ public class Brigand extends Human {
         this.isInJail = isInJail;
     }
 
+    public int getReward() {
+        return reward;
+    }
+
+    public void kidnap(Sieur victim) {
+        this.talk("Ah ah ! " + victim.getName() + ", tu es mien désormais !");
+        victim.getKidnapped();
+    }
+
+    public void getCapturedBy(Cowgirl heroin) {
+        this.isInJail = true;
+        this.talk("Damned, je suis fait•e ! " + heroin.getName() + ", tu m'as eu•e !");
+    }
+
     @Override
     public String toString() {
         String captiveState = isInJail ? "en taule, ha" : "en cavale, peuh";

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/interface-test/interface-test.iml" filepath="$PROJECT_DIR$/interface-test/interface-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java-project.iml" filepath="$PROJECT_DIR$/.idea/java-project.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-town/java-town.iml" filepath="$PROJECT_DIR$/java-town/java-town.iml" />
     </modules>
