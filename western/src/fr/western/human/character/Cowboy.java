@@ -48,4 +48,8 @@ public class Cowboy extends Human {
         return this.talk("You're free my beautifull " + lady.getName() + ". Take care of this " + lady.getDressColor() + " dress.");
     }
 
+    public String introduce(){
+        return this.talk(this.getName()) ;
+    }
+
 }

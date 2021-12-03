@@ -26,6 +26,7 @@ public class Lady extends Human {
         this.dressColor = dressColor;
     }
 
+    // GETTERS
     public boolean getIsCaptive() {
         return this.isCaptive;
     }
@@ -34,6 +35,7 @@ public class Lady extends Human {
         return this.dressColor;
     }
 
+    // SETTERS
     public String setDressColor(String dressColor) {
         this.dressColor = dressColor;
         return this.talk("Look at my new " + this.dressColor + "dress !");
@@ -43,11 +45,16 @@ public class Lady extends Human {
         this.isCaptive = value;
     }
 
+    // ACTIONS
     public String yell(){
         return this.talk("HEEEEELLLLLPPPPP !!!");
     }
 
     public String thankFull(Cowboy cowboy){
         return this.talk("Thank you my hero " + cowboy.getName() + " ! You saved me !");
+    }
+
+    public String introduce(){
+        return this.talk("Miss " + this.getName() + ".") ;
     }
 }

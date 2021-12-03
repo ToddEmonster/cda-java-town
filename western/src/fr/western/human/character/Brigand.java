@@ -76,4 +76,8 @@ public class Brigand extends Human {
         setIsInJail(false);
         return this.talk("I'm free again !!");
     }
+
+    public String introduce(){
+        return this.talk("I'm " + this.getName() + " the " + this.getLook() +".") ;
+    }
 }
