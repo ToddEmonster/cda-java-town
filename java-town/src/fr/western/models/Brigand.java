@@ -44,7 +44,7 @@ public class Brigand extends Human {
         return reward;
     }
 
-    public void kidnap(Sieur victim) {
+    public void kidnap(Sir victim) {
         this.talk("Ah ah ! " + victim.getName() + ", tu es mien désormais !");
         victim.getKidnapped();
     }

@@ -8,15 +8,15 @@ public class Story {
     public static void main(String[] args) {
         System.out.println("Welcome in Reverso Mundo >:D");
 
-        System.out.println("\nQue veux-tu tester ? (human/sieur/brigand/cowgirl/all) :");
+        System.out.println("\nQue veux-tu tester ? (human/sir/brigand/cowgirl/all) :");
         String answer = scanner.next().toLowerCase();
 
         switch(answer) {
             case "human":
                 testHuman();
                 break;
-            case "sieur":
-                testSieur();
+            case "sir":
+                testSir();
                 break;
             case "brigand":
                 testBrigand();
@@ -27,7 +27,7 @@ public class Story {
             default:
             case "all":
                 testHuman();
-                testSieur();
+                testSir();
                 testBrigand();
                 testCowgirl();
                 break;
@@ -42,12 +42,12 @@ public class Story {
         boris.drink();
     }
 
-    private static void testSieur() {
+    private static void testSir() {
         System.out.println("\n");
-        Sieur luke = new Sieur("Lucky Luke");
-        Sieur rosario = new Sieur("Rosario DelMundo", "rose");
-        Sieur tom = new Sieur ("Tom Sawyer", false);
-        Sieur voldemort = new Sieur ("Tom Jedusor", "noire", true);
+        Sir luke = new Sir("Lucky Luke");
+        Sir rosario = new Sir("Rosario DelMundo", "rose");
+        Sir tom = new Sir("Tom Sawyer", false);
+        Sir voldemort = new Sir("Tom Jedusor", "noire", true);
         System.out.println(luke + "\n" + rosario + "\n" + tom + "\n" + voldemort);
 
         System.out.println("La robe de " + luke.getName() + " est " + luke.getDressColor());
@@ -68,7 +68,7 @@ public class Story {
         System.out.println(joe + "\n" + william + "\n" + jack + "\n" + averell + "\n" + miaouss);
 
         Brigand janet = new Brigand("Calamity Janet", 1000);
-        Sieur sacha = new Sieur("Sacha Ketchum");
+        Sir sacha = new Sir("Sacha Ketchum");
         Cowgirl jessie = new Cowgirl("Jessie James");
         System.out.println("Pour Jessie : " + janet.getReward() + " $");
         janet.kidnap(sacha);
@@ -78,8 +78,18 @@ public class Story {
     private static void testCowgirl() {
         System.out.println("\n");
         Cowgirl jessie = new Cowgirl("Jessie James");
-        Cowgirl lucky = new Cowgirl("Lucky Luke");
+        Cowgirl lucy = new Cowgirl("Lucy Luke", 100);
+        Cowgirl james = new Cowgirl("James Jessie", "charismatique");
 
+        System.out.println(jessie + "\n" + lucy + "\n" + james);
+
+        System.out.println("\n");
+        Brigand janet = new Brigand("Calamity Janet", 1000);
+        Sir sacha = new Sir("Sacha Ketchum");
+        janet.kidnap(sacha);
+
+        lucy.shootOn(janet);
+        lucy.free(sacha);
     }
 
 

@@ -5,18 +5,16 @@ public class Cowgirl extends Human {
     private String virtue;
 
     public Cowgirl(String name) {
-        this(name, 0, "vaillant");
+        this(name, 0, "vaillante");
     }
 
     public Cowgirl(String name, int popularity) {
-        this(name, popularity, "vaillant");
+        this(name, popularity, "vaillante");
     }
 
     public Cowgirl(String name, String virtue) {
         this(name, 0, virtue);
     }
-
-    // Cowgirl lassie = new Cowgirl("Lassie", "badass");
 
     public Cowgirl(String name, int popularity, String virtue) {
         super(name);
@@ -25,13 +23,25 @@ public class Cowgirl extends Human {
     }
 
     public void shootOn(Brigand rascal) {
-        System.out.println("[ Le" + this.virtue + " " + this.name
-                + "tire sur " + rascal.getName() + ". PAN ! ]");
+        System.out.println("[ La " + this.virtue + " " + this.name
+                + " tire sur " + rascal.getName() + ". PAN ! ]");
         this.talk("Prend ça, rascal !");
     }
 
-    public void free(Sieur victim) {
-        victim.getFreedBy(this);
-        System.out.println("");
+    public void free(Sir victim) {
+        if (victim.isCaptive()) {
+            victim.getFreedBy(this);
+            this.talk("Cher monsieur " + victim.getName() +", vous voici libre !");
+        } else {
+            this.talk("Mais, monsieur " + victim.getName() +", vous êtes déjà libre !");
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "[ Voici la Cowgirl " + this.name +
+                ", elle a un niveau de popularité à " + popularity +
+                " et est réputée pour être " + virtue +
+                "]";
     }
 }

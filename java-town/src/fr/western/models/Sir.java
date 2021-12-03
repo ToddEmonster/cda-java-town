@@ -1,22 +1,22 @@
 package fr.western.models;
 
-public class Sieur extends Human {
+public class Sir extends Human {
     private String dressColor;
     private boolean isCaptive;
 
-    public Sieur(String name) {
+    public Sir(String name) {
         this(name, "bleue", false);
     }
 
-    public Sieur(String name, String dressColor) {
+    public Sir(String name, String dressColor) {
         this(name, dressColor, false);
     }
 
-    public Sieur(String name, boolean isCaptive) {
+    public Sir(String name, boolean isCaptive) {
         this(name, "bleue", isCaptive);
     }
 
-    public Sieur(String name, String dressColor, boolean isCaptive) {
+    public Sir(String name, String dressColor, boolean isCaptive) {
         super(name);
         this.dressColor = dressColor;
         this.isCaptive = isCaptive;
