@@ -2,11 +2,42 @@ package fr.town;
 
 public class Humain {
 
-    protected String nom;
-    protected String boisson;
+    private String nom;
+    private String boisson = "eau";
 
-    public Humain() {
+    public Humain(String nom, String boisson) {
         this.nom = nom;
-        this.boisson = "l'eau";
+        this.boisson = boisson;
+    }
+
+    //gettter and setter
+
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getBoisson() {
+        return boisson;
+    }
+
+    public void setBoisson(String boisson) {
+        this.boisson = boisson;
+    }
+
+    // Methode
+    public void parle(){
+        System.out.println("nom sde l'humain : " + this.nom);
+    }
+
+    public void presenter(){
+        System.out.println("Bonjour, je m'appel " + this.nom + " et j'aime boire de " + this.boisson);
+    }
+    public void boire(){
+        System.out.println("Ah ! un bon verre de " + this.boisson);
     }
 }
