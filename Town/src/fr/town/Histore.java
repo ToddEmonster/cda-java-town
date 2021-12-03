@@ -3,28 +3,37 @@ package fr.town;
 public class Histore {
     public static void main(String[] args) {
 
-        Humain humain = new Humain("Billy", "l'eau");
+        Humain humain = new Humain("Billy", "eau");
         humain.parle();
         humain.presenter();
         humain.boire();
 
-        Humain dame = new Dame("Louise", "Thé");
-        dame.parle();
-        dame.presenter();
-        dame.boire();
-        ((Dame)dame).kidnapper();
-        ((Dame)dame).liberer();
-       ((Dame)dame).habiller("blue");
+        Humain cowboy = new Cowboy("Davy", "limonade");
 
-       Humain brigand = new Brigand("Malcom", "Wiskey");
+        Humain dame1 = new Dame("Louise", "Thé");
+        Humain dame2 = new Dame("Jeannine", "tysanne");
+        dame1.parle();
+        dame1.presenter();
+        dame1.boire();
+        ((Dame)dame1).kidnapper();
+       ((Dame)dame1).habiller("blue");
+
+       Humain brigand = new Brigand("Malcom", "Whiskey");
        brigand.parle();
        brigand.presenter();
        brigand.boire();
-        ((Brigand)brigand).kidnapper("Louise");
-        ((Brigand)brigand).kidnapper("Jeannine");
+        ((Brigand)brigand).kidnapper(dame1.getNom());
+        ((Brigand)brigand).kidnapper(dame2.getNom());
 
-        ((Brigand)brigand).arreter("Billy");
+        ((Brigand)brigand).arreter(cowboy.getNom());
         ((Brigand)brigand).reward();
+
+
+
+        cowboy.parle();
+        cowboy.presenter();
+        cowboy.boire();
+        ((Cowboy)cowboy).tirer(brigand.getNom(), ((Dame)dame1));
 
 
     }

@@ -3,7 +3,7 @@ package fr.town;
 public class Humain {
 
     private String nom;
-    private String boisson = "eau";
+    private String boisson;
 
     public Humain(String nom, String boisson) {
         this.nom = nom;

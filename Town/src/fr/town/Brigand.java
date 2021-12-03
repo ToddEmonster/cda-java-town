@@ -7,23 +7,26 @@ public class Brigand extends Humain{
     private int recompense;
     private boolean prison;
 
+
     public Brigand(String nom, String boisson){
         super(nom, boisson);
         this.recompense = 100;
         this.prison = false;
         this.look = look;
+
+
     }
 
     //Method
-    public void kidnapper(String nom){
+    public void kidnapper(String dame){
         rapt++;
-        System.out.println("Ah Ah ! " + nom + ", tu es désormais mienne");
+        System.out.println("Ah Ah ! " + dame + ", tu es désormais mienne");
     }
 
-    public void arreter(String nom){
+    public void arreter(String cowboy){
         if(prison == false){
             prison = true;
-            System.out.println("Damned, je suis fait, " + nom + " tu m'as eu !");
+            System.out.println("Damned, je suis fait, " + cowboy + " tu m'as eu !");
         }
     }
 

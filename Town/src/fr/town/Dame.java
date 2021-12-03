@@ -5,16 +5,23 @@ public class Dame extends Humain{
     private String colorDress;
     private boolean captive;
 
+
     public Dame(String nom, String boisson){
         super(nom, boisson);
         this.captive = false;
         this.colorDress = colorDress;
+
     }
 
     public void setColorDress(){
         this.colorDress = colorDress;
     }
+    //getter and setter
 
+
+    public boolean isCaptive() {
+        return captive;
+    }
 
     // Method
     public void kidnapper(){
@@ -22,9 +29,9 @@ public class Dame extends Humain{
         System.out.println(" Hiiiiiiiiiiiiiiiii!!!!!!!");
     }
 
-    public void liberer(){
+    public void liberer(String cowboy){
         if(captive == true) {
-            System.out.println("Merci gentil cowboy");
+            System.out.println("Merci M. " + cowboy + " comme vous êtes fort");
             captive = false;
         }
     }
