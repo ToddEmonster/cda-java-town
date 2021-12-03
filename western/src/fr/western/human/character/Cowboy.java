@@ -9,7 +9,7 @@ public class Cowboy extends Human {
 
     // CONSTRUCTORS
     public Cowboy(String name) {
-        super(name, "whisky");
+        super(name);
     }
 
     public Cowboy(String name, String favoriteDrink) {

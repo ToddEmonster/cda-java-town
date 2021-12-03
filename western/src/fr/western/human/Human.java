@@ -24,7 +24,7 @@ public class Human {
     }
 
     public String drink() {
-        return"Sah ! A great glass of " + this.favoriteDrink.toLowerCase() + ".";
+        return this.talk("Sah ! A great glass of " + this.favoriteDrink.toLowerCase() + ".");
     }
 
     public String getName(){
