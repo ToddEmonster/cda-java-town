@@ -1,5 +1,3 @@
-# Ignore .iml file
-*.iml
 
 # Ignore idea folder
 .idea/**
