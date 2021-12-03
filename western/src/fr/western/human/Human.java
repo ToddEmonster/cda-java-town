@@ -4,6 +4,7 @@ public class Human {
     private String name;
     private String favoriteDrink;
 
+    // CONSTRUCTORS
     public Human(String name) {
         this.name = name;
         this.favoriteDrink = "Water";
@@ -14,16 +15,16 @@ public class Human {
         this.favoriteDrink = favoriteDrink;
     }
 
-    public String speak(String sentence){
-        return this.name + " " + sentence;
+    public String talk(String sentence){
+        return this.name + "  -  " + sentence;
     }
 
     public String introduce(){
-        return "Hi i'm " + this.name + " and my favorite drink is " + this.favoriteDrink.toLowerCase() +". SLURP !" ;
+        return this.talk("Hi i'm " + this.name + " and my favorite drink is " + this.favoriteDrink.toLowerCase() +". SLURP !") ;
     }
 
     public String drink() {
-        return "Sah ! A great glass of " + this.favoriteDrink.toLowerCase() + ".";
+        return"Sah ! A great glass of " + this.favoriteDrink.toLowerCase() + ".";
     }
 
     public String getName(){
