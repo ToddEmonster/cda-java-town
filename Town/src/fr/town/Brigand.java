@@ -8,6 +8,7 @@ public class Brigand extends Humain{
     private boolean prison;
 
 
+
     public Brigand(String nom, String boisson){
         super(nom, boisson);
         this.recompense = 100;
@@ -33,6 +34,14 @@ public class Brigand extends Humain{
     public void reward(){
         recompense = this.recompense * rapt;
         System.out.println("la tête du bandit " + getNom() + " est mise à prix de " + recompense + "$");
+    }
+
+    @Override
+    public void presenter(){
+        System.out.println("Bonjour, je m'appel  " + getNom() + " le " + this.look + " et j'aime boire du " + getBoisson());
+        System.out.println("J'ai l'air " + this.look + " et j'ai déjà kidnappé " + this.rapt + " femmes");
+        System.out.println("Ma tête est mise à prix " + recompense);
+
     }
 
 }

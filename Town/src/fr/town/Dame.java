@@ -4,6 +4,8 @@ package fr.town;
 public class Dame extends Humain{
     private String colorDress;
     private boolean captive;
+    protected String boisson;
+
 
 
     public Dame(String nom, String boisson){
@@ -41,5 +43,9 @@ public class Dame extends Humain{
         System.out.println("Regareder ma nouvelle robe de couleur " + colorDress);
     }
 
+    @Override
+    public void presenter(){
+        System.out.println("Bonjour, je m'appel Miss " + super.getNom() + " et j'aime boire de " + super.getBoisson());
+    }
 
 }

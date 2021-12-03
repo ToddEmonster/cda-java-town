@@ -5,6 +5,12 @@ public class Humain {
     private String nom;
     private String boisson;
 
+
+    public Humain(String nom){
+        this.nom= nom;
+        this.boisson = boisson;
+    }
+
     public Humain(String nom, String boisson) {
         this.nom = nom;
         this.boisson = boisson;
@@ -17,9 +23,7 @@ public class Humain {
         return nom;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
+
 
     public String getBoisson() {
         return boisson;

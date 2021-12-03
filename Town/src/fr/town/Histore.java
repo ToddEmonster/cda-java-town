@@ -8,32 +8,33 @@ public class Histore {
         humain.presenter();
         humain.boire();
 
-        Humain cowboy = new Cowboy("Davy", "limonade");
+        Cowboy cowboy = new Cowboy("Davy", "Whisky");
 
-        Humain dame1 = new Dame("Louise", "Thé");
-        Humain dame2 = new Dame("Jeannine", "tysanne");
+        Dame dame1 = new Dame("Louise", "Thé");
+        Dame dame2 = new Dame("Jeannine", "tysanne");
         dame1.parle();
         dame1.presenter();
         dame1.boire();
-        ((Dame)dame1).kidnapper();
-       ((Dame)dame1).habiller("blue");
+        dame1.kidnapper();
+       dame1.habiller("blue");
 
-       Humain brigand = new Brigand("Malcom", "Whiskey");
+       Brigand brigand = new Brigand("Malcom", "Tord-boyaud");
        brigand.parle();
-       brigand.presenter();
-       brigand.boire();
-        ((Brigand)brigand).kidnapper(dame1.getNom());
-        ((Brigand)brigand).kidnapper(dame2.getNom());
 
-        ((Brigand)brigand).arreter(cowboy.getNom());
-        ((Brigand)brigand).reward();
+       brigand.boire();
+        brigand.kidnapper(dame1.getNom());
+        brigand.kidnapper(dame2.getNom());
+        brigand.reward();
+        brigand.presenter();
+        brigand.arreter(cowboy.getNom());
+
 
 
 
         cowboy.parle();
         cowboy.presenter();
         cowboy.boire();
-        ((Cowboy)cowboy).tirer(brigand.getNom(), ((Dame)dame1));
+        cowboy.tirer(brigand.getNom(), dame1);
 
 
     }
