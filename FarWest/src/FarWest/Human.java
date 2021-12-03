@@ -2,23 +2,27 @@ package FarWest;
 
 public class Human {
 
-    private String name;
-    private String boisson = "eau";
+    protected String name;
+    protected String boisson;
 
-    Human(String name){
+    public Human(String name) {
         this.name = name;
-        this.boisson = boisson;
+        this.boisson = "l'eau";
     }
 
-    private void talk(String text){
-        System.out.println(this.name + " "+text);
+    private String getName() {
+        return this.name;
+    }
+    private String getBoisson() {
+        return this.boisson;
     }
 
-    public String getName() {
-        return name;
+    public void presentation(){
+        System.out.println("Enchanté, je m'appele " +getName()+", j'aime "+getBoisson());
     }
 
-    public String getBoisson() {
-        return boisson;
+    public void speak() {
+        System.out.println("Halte cowboys, j'ai soif, allons boire un coup");
     }
+
 }

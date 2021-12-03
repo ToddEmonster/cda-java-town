@@ -1,11 +1,17 @@
 package FarWest;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class History {
+
 
     public static void main(String[] args) {
         Human human1 = new Human("Boris");
+        Human brigand1 = new Brigand("Quentin", "la binouze");
 
-        System.out.println("Halte cowboys, j'ai soif, viens "+ human1.getName() +", allons boire de " + human1.getBoisson());
-        System.out.println("jiozerlkdfs");
+        human1.presentation();
+        human1.speak();
+
+        brigand1.presentation();
     }
 }
