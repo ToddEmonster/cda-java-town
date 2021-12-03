@@ -17,12 +17,17 @@ public class Human {
         return this.boisson;
     }
 
-    public void presentation(){
-        System.out.println("Enchanté, je m'appele " +getName()+", j'aime "+getBoisson());
+    protected  String presentation(){
+        return "Enchanté, je m'appele " +getName()+", j'aime "+getBoisson();
     }
 
-    public void speak() {
-        System.out.println("Halte cowboys, j'ai soif, allons boire un coup");
+    protected String talk(String text){
+        return this.name + " -- " + text;
     }
+
+    protected String speak() {
+        return "Halte cowboys, j'ai soif, allons boire un coup";
+    }
+
 
 }
