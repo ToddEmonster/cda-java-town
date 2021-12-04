@@ -4,6 +4,7 @@ public class Brigand extends Human {
     private String look;
     private int reward;
     private boolean isInJail;
+    private int numberOfKidnappings;
 
     public Brigand(String name) {
         this(name, "méchante", 100, false);
@@ -38,6 +39,8 @@ public class Brigand extends Human {
         this.look = look;
         this.reward = reward;
         this.isInJail = isInJail;
+        this.numberOfKidnappings = 0;
+        this.favoriteDrink = "tord-boyal";
     }
 
     public int getReward() {
@@ -48,9 +51,27 @@ public class Brigand extends Human {
         return this.name + " la " + this.look;
     }
 
+    public int getNumberOfKidnappings() {
+        return numberOfKidnappings;
+    }
+
+    public String getLook() {
+        return look;
+    }
+
+    public boolean isInJail() {
+        return isInJail;
+    }
+
+    public void introduceSelf() {
+        super.introduceSelf();
+        this.talk("J'ai l'air " + this.look + " et j'ai déjà kidnappé " + this.numberOfKidnappings + " sieurs !");
+        this.talk("Ma tête est mise à prix à hauteur de " + this.reward + " $ !");
+    }
     public void kidnap(Sir victim) {
         this.talk("Ah ah ! " + victim.getName() + ", tu es mien désormais !");
         victim.getKidnapped();
+        this.numberOfKidnappings += 1;
     }
 
     public void getCapturedBy(Cowgirl heroin) {

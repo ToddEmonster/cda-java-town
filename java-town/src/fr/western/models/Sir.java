@@ -20,6 +20,7 @@ public class Sir extends Human {
         super(name);
         this.dressColor = dressColor;
         this.isCaptive = isCaptive;
+        this.favoriteDrink = "MILKU";
     }
 
     public String getDressColor() {
@@ -37,6 +38,11 @@ public class Sir extends Human {
 
     public String getName() {
         return "Damoiseau " + this.name;
+    }
+
+    public void introduceSelf() {
+        super.introduceSelf();
+        this.talk("Ma robe si belle est de couleur " + this.dressColor);
     }
 
     public void getKidnapped() {

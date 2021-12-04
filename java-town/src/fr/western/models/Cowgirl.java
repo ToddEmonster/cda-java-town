@@ -20,6 +20,26 @@ public class Cowgirl extends Human {
         super(name);
         this.popularity = popularity;
         this.virtue = virtue;
+        this.favoriteDrink = "nhonsky";
+    }
+
+    public void introduceSelf() {
+        super.introduceSelf();
+        String numberOfFans;
+        switch (this.popularity) {
+            case 0 :
+                numberOfFans = "personne";
+                break;
+            case 1 :
+                numberOfFans = this.popularity + " personne";
+                break;
+                default:
+            numberOfFans = this.popularity + " personnes";
+        }
+        this.talk("On dit de moi que je suis "
+                + this.virtue
+                + ", je suis populaire auprès de "
+                + numberOfFans);
     }
 
     public void shootOn(Brigand rascal) {
