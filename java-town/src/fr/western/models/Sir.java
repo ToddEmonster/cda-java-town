@@ -42,7 +42,7 @@ public class Sir extends Human {
 
     public void introduceSelf() {
         super.introduceSelf();
-        this.talk("Ma robe si belle est de couleur " + this.dressColor);
+        this.talk("Ma robe de soie et de lin est de couleur " + this.dressColor);
     }
 
     public void getKidnapped() {

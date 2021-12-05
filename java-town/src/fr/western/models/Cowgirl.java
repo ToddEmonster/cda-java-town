@@ -20,7 +20,7 @@ public class Cowgirl extends Human {
         super(name);
         this.popularity = popularity;
         this.virtue = virtue;
-        this.favoriteDrink = "nhonsky";
+        this.favoriteDrink = "NHONSKY";
     }
 
     public void introduceSelf() {
@@ -28,7 +28,7 @@ public class Cowgirl extends Human {
         String numberOfFans;
         switch (this.popularity) {
             case 0 :
-                numberOfFans = "personne";
+                numberOfFans = "... personne";
                 break;
             case 1 :
                 numberOfFans = this.popularity + " personne";

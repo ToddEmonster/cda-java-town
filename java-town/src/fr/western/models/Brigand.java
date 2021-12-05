@@ -40,7 +40,7 @@ public class Brigand extends Human {
         this.reward = reward;
         this.isInJail = isInJail;
         this.numberOfKidnappings = 0;
-        this.favoriteDrink = "tord-boyal";
+        this.favoriteDrink = "TORD-BOYARD";
     }
 
     public int getReward() {

@@ -8,10 +8,10 @@ public class Story {
     public static void main(String[] args) {
         System.out.println("Welcome in Reverso Mundo >:D");
 
-        System.out.println("\nQue veux-tu tester ? (human/sir/brigand/cowgirl/all) :");
+        System.out.println("\nQue veux-tu tester ? (all/human/sir/brigand/cowgirl/super/barman/sheriff) :");
         String answer = scanner.next().toLowerCase();
 
-        switch(answer) {
+        switch (answer) {
             case "human":
                 testHuman();
                 break;
@@ -24,12 +24,23 @@ public class Story {
             case "cowgirl":
                 testCowgirl();
                 break;
+            case "super":
+                testSuper();
+                break;
+            case "barman":
+                testBarman();
+                break;
+
+            case "sheriff":
+                testSheriff();
+                break;
             default:
             case "all":
                 testHuman();
                 testSir();
                 testBrigand();
                 testCowgirl();
+                testSuper();
                 break;
         }
     }
@@ -59,7 +70,7 @@ public class Story {
     private static void testBrigand() {
         System.out.println("\n");
         Brigand joy = new Brigand("Joy Dalton");
-        Brigand will = new Brigand("Will Dalton", "cool" );
+        Brigand will = new Brigand("Will Dalton", "cool");
         Brigand jackie = new Brigand("Jackie Dalton", 300);
         Brigand averell = new Brigand("Averell Dalton", "gentil", 50, true);
 
@@ -95,6 +106,20 @@ public class Story {
     }
 
 
+    private static void testSuper() {
+        Sir arthur = new Sir("Arthur Conan Doyle");
+        Brigand janet = new Brigand("Calamity Janet");
+        Cowgirl lucy = new Cowgirl("Lucy Luke");
 
+        arthur.introduceSelf();
+        janet.introduceSelf();
+        lucy.introduceSelf();
+    }
 
+    private static void testBarman() {
+
+    }
+    private static void testSheriff() {
+
+    }
 }
