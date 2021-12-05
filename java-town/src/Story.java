@@ -10,7 +10,8 @@ public class Story {
 
         System.out.println("\nQue veux-tu tester ?"
                 + "(all/human/sir/brigand/cowgirl/super/"
-                + "barwoman/sheriff/sheriff-cowgirl/ripoux)");
+                + "barwoman/sheriff/sheriff-cowgirl/"
+                + "ripoux/sir-brigand/indian)");
         String answer = scanner.next().toLowerCase();
 
         switch (answer) {
@@ -40,6 +41,12 @@ public class Story {
                 break;
             case "ripoux":
                 testRipoux();
+                break;
+            case "sir-brigand":
+                testSirBrigand();
+                break;
+            case "indian":
+                testIndian();
                 break;
             default:
             case "all":
@@ -144,7 +151,7 @@ public class Story {
         Brigand janet = new Brigand("Calamity Janet");
 
         clarice.introduceSelf();
-        clarice.setBountyFor(janet, 250);
+        clarice.setBountyOn(janet, 250);
         clarice.shootOn(janet);
         clarice.arrest(janet);
         clarice.introduceSelf();
@@ -158,9 +165,11 @@ public class Story {
         cleo.introduceSelf(); // uses Sheriff.introduceSelf() still
         sheriffCleo.introduceSelf();
 
-        sheriffCleo.setBountyFor(janet, 250); // impossible for cleo
+        sheriffCleo.setBountyOn(janet, 250); // impossible for cleo
         sheriffCleo.arrest(janet); // impossible for cleo
-    };
+    }
+
+    ;
 
     private static void testRipoux() {
         CrookedCop matilda = new CrookedCop("Matilda");
@@ -176,12 +185,38 @@ public class Story {
         matilda.free(jeanMichiel);
 
         // Is Sheriff
-        matilda.setBountyFor(janet, 50);
+        matilda.setBountyOn(janet, 50);
         matilda.arrest(janet);
 
         // Is Outlaw
-        clarice.setBountyFor(matilda, 500);
+        matilda.kidnap(arthur);
+        clarice.setBountyOn(matilda, 500);
         clarice.arrest(matilda);
+    }
+
+    private static void testSirBrigand() {
+        SirBrigand john = new SirBrigand("Calamity John", "grise");
+        Cowgirl lucy = new Cowgirl("Lucy Luke");
+        Sheriff clarice = new Sheriff("Clarice Starling");
+        Brigand janet = new Brigand("Calamity Janet");
+        Sir arthur = new Sir("Arthur Conan Doyle", "verte");
+
+        // Is Sir
+        john.introduceSelf();
+        janet.kidnap(john);
+        lucy.shootOn(janet);
+        lucy.free(john);
+        john.setDressColor("noire");
+
+        // Is Outlaw
+        arthur.introduceSelf();
+        john.kidnap(arthur);
+        clarice.setBountyOn(john, 350);
+        clarice.shootOn(john);
+        clarice.arrest(john);
+    }
+
+    private static void testIndian() {
 
     }
 }

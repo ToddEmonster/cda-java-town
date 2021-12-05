@@ -1,8 +1,8 @@
 package fr.western.models;
 
 public class Sir extends Human {
-    private String dressColor;
-    private boolean isCaptive;
+    protected String dressColor;
+    protected boolean isCaptive;
 
     public Sir(String name) {
         this(name, "bleue", false);

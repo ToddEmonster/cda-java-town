@@ -45,7 +45,7 @@ public class Sheriff extends Cowgirl {
         return numberOfArrests;
     }
 
-    public void setBountyFor(IOutlaw huntedBrigand, int reward) {
+    public void setBountyOn(IOutlaw huntedBrigand, int reward) {
         System.out.println("[ Shérif " + this.name
                 + " placarde une affiche dans toute la ville,"
                 + " et régulièrement tonne de sa voix de stentor : ]");
