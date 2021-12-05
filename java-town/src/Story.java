@@ -9,7 +9,8 @@ public class Story {
         System.out.println("Welcome in Reverso Mundo >:D");
 
         System.out.println("\nQue veux-tu tester ?"
-                + " (all/human/sir/brigand/cowgirl/super/barwoman/sheriff/sheriff-cowgirl) :");
+                + "(all/human/sir/brigand/cowgirl/super/"
+                + "barwoman/sheriff/sheriff-cowgirl/ripoux)");
         String answer = scanner.next().toLowerCase();
 
         switch (answer) {
@@ -37,6 +38,9 @@ public class Story {
             case "sheriff-cowgirl":
                 testSheriffAsCowgirl();
                 break;
+            case "ripoux":
+                testRipoux();
+                break;
             default:
             case "all":
                 testHuman();
@@ -46,6 +50,7 @@ public class Story {
                 testSuper();
                 testBarwoman();
                 testSheriff();
+                testRipoux();
                 break;
         }
     }
@@ -156,4 +161,27 @@ public class Story {
         sheriffCleo.setBountyFor(janet, 250); // impossible for cleo
         sheriffCleo.arrest(janet); // impossible for cleo
     };
+
+    private static void testRipoux() {
+        CrookedCop matilda = new CrookedCop("Matilda");
+        Sheriff clarice = new Sheriff("Clarice Starling");
+        Brigand janet = new Brigand("Calamity Janet");
+        Sir jeanMichiel = new Sir("Chiant-Michiel Blanchier", true);
+        Sir arthur = new Sir("Arthur Conan Doyle");
+
+        matilda.introduceSelf();
+
+        // Is Cowgirl
+        janet.kidnap(jeanMichiel);
+        matilda.free(jeanMichiel);
+
+        // Is Sheriff
+        matilda.setBountyFor(janet, 50);
+        matilda.arrest(janet);
+
+        // Is Outlaw
+        clarice.setBountyFor(matilda, 500);
+        clarice.arrest(matilda);
+
+    }
 }

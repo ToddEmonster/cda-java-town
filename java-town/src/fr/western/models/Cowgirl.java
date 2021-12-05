@@ -1,8 +1,8 @@
 package fr.western.models;
 
 public class Cowgirl extends Human {
-    private int popularity;
-    private String virtue;
+    protected int popularity;
+    protected String virtue;
 
     public Cowgirl(String name) {
         this(name, 0, "vaillante");
@@ -33,8 +33,8 @@ public class Cowgirl extends Human {
             case 1 :
                 numberOfFans = this.popularity + " personne";
                 break;
-                default:
-            numberOfFans = this.popularity + " personnes";
+            default:
+                numberOfFans = this.popularity + " personnes";
         }
         this.talk("On dit de moi que je suis "
                 + this.virtue
@@ -42,7 +42,7 @@ public class Cowgirl extends Human {
                 + numberOfFans);
     }
 
-    public void shootOn(Brigand rascal) {
+    public void shootOn(IOutlaw rascal) {
         System.out.println("[ La " + this.virtue + " " + this.getName()
                 + " tire sur " + rascal.getName() + ". PAN ! ]");
         this.talk("Prend ça, rascal !");
@@ -50,8 +50,8 @@ public class Cowgirl extends Human {
 
     public void free(Sir victim) {
         if (victim.isCaptive()) {
-            victim.getFreedBy(this);
             this.talk("Cher monsieur " + victim.getName() +", vous voici libre !");
+            victim.getFreedBy(this);
         } else {
             this.talk("Mais, monsieur " + victim.getName() +", vous êtes déjà libre !");
         }

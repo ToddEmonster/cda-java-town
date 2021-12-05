@@ -1,6 +1,6 @@
 package fr.western.models;
 
-public class Brigand extends Human {
+public class Brigand extends Human implements IOutlaw {
     private String look;
     private int reward;
     private boolean isInJail;
@@ -72,6 +72,7 @@ public class Brigand extends Human {
         this.talk("J'ai l'air " + this.look + " et j'ai déjà kidnappé " + this.numberOfKidnappings + " sieurs !");
         this.talk("Ma tête est mise à prix à hauteur de " + this.reward + " $ !");
     }
+
     public void kidnap(Sir victim) {
         this.talk("Ah ah ! " + victim.getName() + ", tu es mien désormais !");
         victim.getKidnapped();
