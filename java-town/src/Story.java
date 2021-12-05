@@ -11,7 +11,7 @@ public class Story {
         System.out.println("\nQue veux-tu tester ?"
                 + "(all/human/sir/brigand/cowgirl/super/"
                 + "barwoman/sheriff/sheriff-cowgirl/"
-                + "ripoux/sir-brigand/indian)");
+                + "ripoux/sir-brigand/native)");
         String answer = scanner.next().toLowerCase();
 
         switch (answer) {
@@ -45,8 +45,8 @@ public class Story {
             case "sir-brigand":
                 testSirBrigand();
                 break;
-            case "indian":
-                testIndian();
+            case "native":
+                testNative();
                 break;
             default:
             case "all":
@@ -216,7 +216,12 @@ public class Story {
         clarice.arrest(john);
     }
 
-    private static void testIndian() {
+    private static void testNative() {
+        Sir arthur = new Sir("Arthur Conan Doyle", "verte");
+        IPaleFace paleFaceArthur = (IPaleFace)arthur; // FIXME
+        Native matoaka = new Native("Matoaka Amonute", 2);
 
+        matoaka.introduceSelf();
+        matoaka.scalp(paleFaceArthur);
     }
 }
