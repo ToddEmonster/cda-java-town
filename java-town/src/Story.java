@@ -8,7 +8,7 @@ public class Story {
     public static void main(String[] args) {
         System.out.println("Welcome in Reverso Mundo >:D");
 
-        System.out.println("\nQue veux-tu tester ? (all/human/sir/brigand/cowgirl/super/barman/sheriff) :");
+        System.out.println("\nQue veux-tu tester ? (all/human/sir/brigand/cowgirl/super/barwoman/sheriff) :");
         String answer = scanner.next().toLowerCase();
 
         switch (answer) {
@@ -27,10 +27,9 @@ public class Story {
             case "super":
                 testSuper();
                 break;
-            case "barman":
-                testBarman();
+            case "barwoman":
+                testBarwoman();
                 break;
-
             case "sheriff":
                 testSheriff();
                 break;
@@ -41,6 +40,8 @@ public class Story {
                 testBrigand();
                 testCowgirl();
                 testSuper();
+                testBarwoman();
+                testSheriff();
                 break;
         }
     }
@@ -116,8 +117,17 @@ public class Story {
         lucy.introduceSelf();
     }
 
-    private static void testBarman() {
+    private static void testBarwoman() {
+        Barwoman moe = new Barwoman("Molly \"Moe\"");
+        Cowgirl lucy = new Cowgirl("Lucy Luke");
+        Sir arthur = new Sir("Arthur Conan Doyle");
+        Brigand janet = new Brigand("Calamity Janet");
 
+        moe.getBarName();
+        moe.introduceSelf();
+        moe.serve(lucy);
+        moe.serve(arthur);
+        moe.serve(janet);
     }
     private static void testSheriff() {
 
