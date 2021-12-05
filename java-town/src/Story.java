@@ -129,7 +129,15 @@ public class Story {
         moe.serve(arthur);
         moe.serve(janet);
     }
-    private static void testSheriff() {
 
+    private static void testSheriff() {
+        Sheriff clarice = new Sheriff("Clarice Starling");
+        Brigand janet = new Brigand("Calamity Janet");
+
+        clarice.introduceSelf();
+        clarice.setBountyFor(janet, 250);
+        clarice.shootOn(janet);
+        clarice.arrest(janet);
+        clarice.introduceSelf();
     }
 }

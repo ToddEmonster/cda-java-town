@@ -43,7 +43,7 @@ public class Cowgirl extends Human {
     }
 
     public void shootOn(Brigand rascal) {
-        System.out.println("[ La " + this.virtue + " " + this.name
+        System.out.println("[ La " + this.virtue + " " + this.getName()
                 + " tire sur " + rascal.getName() + ". PAN ! ]");
         this.talk("Prend ça, rascal !");
     }

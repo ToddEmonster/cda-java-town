@@ -47,6 +47,10 @@ public class Brigand extends Human {
         return reward;
     }
 
+    public void setReward(int reward) {
+        this.reward = reward;
+    }
+
     public String getName() {
         return this.name + " la " + this.look;
     }
@@ -76,7 +80,8 @@ public class Brigand extends Human {
 
     public void getCapturedBy(Cowgirl heroin) {
         this.isInJail = true;
-        this.talk("Damned, je suis fait•e ! " + heroin.getName() + ", tu m'as eu•e !");
+        this.talk("Damned, je suis fait•e ! "
+                + heroin.getName() + ", tu m'as eu•e !");
     }
 
     @Override
