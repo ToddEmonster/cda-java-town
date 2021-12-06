@@ -6,9 +6,13 @@ public class History {
 
 
     public static void main(String[] args) {
+
         Brigand brigand1 = new Brigand("Quentin", "la binouze");
         Madam madam1 = new Madam("Karima", "la soupe");
         CowBoy cowBoy1 = new CowBoy("sebastien luke", "le YOP");
+        Barman barman1 = new Barman("boris", "le bobar" );
+        Sherif sherif1 = new Sherif("Manon" , "fée rouge");
+        Sherif sherif2 = new Ripoux("todd" , "l'orange bleue");
 
         System.out.println(brigand1.presentation());
         System.out.println(madam1.presentation());
@@ -26,5 +30,9 @@ public class History {
         System.out.println(brigand1.arrested(cowBoy1));
         System.out.println(cowBoy1.liberate(madam1));
         System.out.println(madam1.changeDress());
+        System.out.println(barman1.talk());
+        sherif1.setWanted(brigand1.getName());
+        System.out.println(sherif2.name);
+
     }
 }

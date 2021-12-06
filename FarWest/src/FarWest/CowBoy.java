@@ -17,6 +17,7 @@ public class CowBoy extends Human{
         this.minimumRewards = ThreadLocalRandom.current().nextInt(1, 100000+1);
     }
 
+
     protected String shoot(Brigand brigand){
         this.totalRewards+=brigand.getReward();
         return this.talk("Le "+this.desc+" "+this.name+" tire sur "+brigand.name+". PAN! "+System.getProperty("line.separator")+"Prend ça rascal!");

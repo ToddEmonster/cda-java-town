@@ -19,11 +19,11 @@ public class Madam extends Human{
     }
 
     protected String changeDress(){
-        return "Regardez ma nouvelle robe "+ colors[ThreadLocalRandom.current().nextInt(0, 4+1)];
+        return this.name + " -- Regardez ma nouvelle robe "+ colors[ThreadLocalRandom.current().nextInt(0, 4+1)];
     }
 
     public void kidnapped() {
-        System.out.println("AAAAHHHHHHHHHHHHH OSKOOOUUURRRRRRRR");
+        System.out.println(this.name + " -- AAAAHHHHHHHHHHHHH OSKOOOUUURRRRRRRR");
         this.LibertyState = "captive";
     }
 

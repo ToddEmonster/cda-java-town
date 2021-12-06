@@ -2,31 +2,12 @@ package FarWest;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Brigand extends Human implements iRipoux{
-
-    private String look;
+public class Ripoux extends Sherif implements iRipoux {
     private int totalKidnapping;
     private boolean arrested;
-    private int reward;
-    private String kidnapping;
 
-    public Brigand(String name, String drink){
-        super(name);
-        this.boisson = drink;
-        this.reward = ThreadLocalRandom.current().nextInt(1, 100000 + 1);
-        this.look = "wicked";
-        this.totalKidnapping = 0;
-    }
-
-    public int getReward() {
-        return reward;
-    }
-    public void setReward(int reward) {
-        this.reward += reward;
-    }
-
-    protected String showReward(){
-        return "la récompense pour le bandit " + this.name + " est de " + this.getReward();
+    Ripoux(String name, String boisson){
+        super (name, boisson);
     }
 
     public String kidnaping(Madam madam ){
