@@ -4,7 +4,10 @@ public interface Hors_la_loi {
 
     public void coffrer(Cowboy c);
 
-    public void kidnapper(Dame dame);
+    public static void kidnapper(Dame dame) {
+
+
+    }
 
     public void getRecompse();
 

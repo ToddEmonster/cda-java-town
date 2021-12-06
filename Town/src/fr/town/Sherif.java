@@ -5,10 +5,11 @@ public class Sherif extends Cowboy{
     private String attitude = "Honnêtes";
 
 
-    public Sherif(String nom){
-        super(nom);
+    public Sherif(String nom, String attitude){
+        super(nom, "vodka");
         this.attitude = attitude;
     }
+
 
     //Methode
 

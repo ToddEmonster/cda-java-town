@@ -15,9 +15,7 @@ public class Dame extends Humain{
 
     }
 
-    public void setColorDress(){
-        this.colorDress = colorDress;
-    }
+
     //getter and setter
 
 
@@ -26,7 +24,7 @@ public class Dame extends Humain{
     }
 
     // Method
-    public void kidnapper(){
+    public void enlever(){
         captive = true;
         System.out.println(" Hiiiiiiiiiiiiiiiii!!!!!!!");
     }

@@ -2,8 +2,8 @@ package fr.town;
 
 public class Brigand extends Humain implements Hors_la_loi{
 
-    private String look = "mechant";
     private static int rapt;
+    private String look = "mechant";
     private int recompense;
     private boolean prison;
 
@@ -14,6 +14,7 @@ public class Brigand extends Humain implements Hors_la_loi{
         this.recompense = 100;
         this.prison = false;
         this.look = look;
+
 
 
     }
@@ -28,9 +29,10 @@ public class Brigand extends Humain implements Hors_la_loi{
     }
 
     //Method
-    public void kidnapper(String dame){
+
+    public static void kidnapper(Dame dame){
         rapt++;
-        System.out.println("Ah Ah ! " + dame + ", tu es désormais mienne");
+        System.out.println("Ah Ah ! " + dame.getNom() + ", tu es désormais mienne");
     }
 
     public void arreter(String cowboy){
@@ -58,11 +60,7 @@ public class Brigand extends Humain implements Hors_la_loi{
 
     }
 
-    @Override
-    public void kidnapper(Dame dame) {
 
-
-    }
 
     @Override
     public void getRecompse() {
@@ -71,6 +69,6 @@ public class Brigand extends Humain implements Hors_la_loi{
 
     @Override
     public void parle(){
-
+        System.out.println(super.getNom());
     }
 }
