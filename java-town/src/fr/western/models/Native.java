@@ -23,18 +23,18 @@ public class Native extends Human {
     }
 
     public void talk(String words) {
-        System.out.println("[" + this.name + "] - " + words + ",  !");
+        System.out.println("[" + this.name + "] - " + words + ", hm !");
     }
 
     public void introduceSelf() {
         super.introduceSelf();
-        this.talk("Je porte " + this.numberOfFeathers + " plumes.");
+        this.talk("Je porte " + this.numberOfFeathers + " plumes");
     }
 
     public void scalp(IPaleFace paleFace) {
-        System.out.println("[ " + this.name + " scalpe le visage pâle " + paleFace.getName() + ". ]" );
+        System.out.println("[ " + this.name + " scalpe la visage pâle " + paleFace.getName() + ". ]" );
         paleFace.talk("Aïe, ma tête !");
         this.numberOfFeathers += 1;
-        this.talk("Une nouvelle plume pour moi.");
+        this.talk("Une nouvelle plume pour moi");
     }
 }

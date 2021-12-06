@@ -217,11 +217,17 @@ public class Story {
     }
 
     private static void testNative() {
-        Sir arthur = new Sir("Arthur Conan Doyle", "verte");
-        IPaleFace paleFaceArthur = (IPaleFace)arthur; // FIXME
         Native matoaka = new Native("Matoaka Amonute", 2);
 
+        Sir arthur = new Sir("Arthur Conan Doyle", "verte");
+        Cowgirl lucy = new Cowgirl("Lucy Luke");
+        Brigand janet = new Brigand("Calamity Janet");
+
         matoaka.introduceSelf();
-        matoaka.scalp(paleFaceArthur);
+        matoaka.scalp(arthur);
+        matoaka.scalp(lucy);
+        matoaka.scalp(janet);
+
+        matoaka.introduceSelf();
     }
 }

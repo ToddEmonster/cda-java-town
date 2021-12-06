@@ -14,3 +14,11 @@ i
 -interface-test/src/fr/tests/models/Plane.java,d/3/d3c1d5b20cd98dd14b17fa447a3f6b43242a2d64
 U
 %interface-test/src/fr/tests/Main.java,3/f/3fbd6764ff8172d7e72929f8c755087c8efb26ab
+\
+,java-town/src/fr/western/models/IOutlaw.java,1/f/1ff8dea18941e5cb115a4ce5694d71a05ae1ea06
+_
+/java-town/src/fr/western/models/CrookedCop.java,f/4/f40d23a052e44b75e9f7752a506d514a4f79f955
+_
+/java-town/src/fr/western/models/SirBrigand.java,5/7/57f034053e1887aa509e1d71e5bff1f7e439c36a
+\
+,java-town/src/fr/western/models/Sheriff.java,1/c/1c95dc6cd735e2eb4ba7a4f7165782eef663ee2d

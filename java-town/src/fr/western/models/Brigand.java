@@ -1,6 +1,6 @@
 package fr.western.models;
 
-public class Brigand extends Human implements IOutlaw {
+public class Brigand extends Human implements IOutlaw, IPaleFace {
     private String look;
     private int reward;
     private boolean isInJail;

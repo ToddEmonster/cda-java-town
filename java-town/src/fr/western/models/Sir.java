@@ -1,6 +1,6 @@
 package fr.western.models;
 
-public class Sir extends Human {
+public class Sir extends Human implements IPaleFace {
     protected String dressColor;
     protected boolean isCaptive;
 

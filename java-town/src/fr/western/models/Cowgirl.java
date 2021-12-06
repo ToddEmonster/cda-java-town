@@ -1,6 +1,6 @@
 package fr.western.models;
 
-public class Cowgirl extends Human {
+public class Cowgirl extends Human implements IPaleFace {
     protected int popularity;
     protected String virtue;
 
