@@ -1,6 +1,6 @@
 package fr.town;
 
-public class Brigand extends Humain{
+public class Brigand extends Humain implements Hors_la_loi{
 
     private String look = "mechant";
     private static int rapt;
@@ -16,6 +16,15 @@ public class Brigand extends Humain{
         this.look = look;
 
 
+    }
+    //getter and setter
+
+
+    public static int getRapt() {
+        return rapt;
+    }
+    public  int getRecompense(){
+        return recompense;
     }
 
     //Method
@@ -44,4 +53,24 @@ public class Brigand extends Humain{
 
     }
 
+    @Override
+    public void coffrer(Cowboy c) {
+
+    }
+
+    @Override
+    public void kidnapper(Dame dame) {
+
+
+    }
+
+    @Override
+    public void getRecompse() {
+
+    }
+
+    @Override
+    public void parle(){
+
+    }
 }

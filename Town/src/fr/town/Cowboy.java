@@ -5,6 +5,9 @@ public class Cowboy extends Humain{
     private static int popularite;
     private String attitude = "vaillant";
 
+    public Cowboy(String nom){
+        super(nom);
+    }
 
 
     public Cowboy(String nom, String boisson){

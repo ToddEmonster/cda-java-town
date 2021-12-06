@@ -8,7 +8,9 @@ public class Histore {
         humain.presenter();
         humain.boire();
 
+        Sherif sherif = new Sherif("Sherif Jones");
         Cowboy cowboy = new Cowboy("Davy", "Whisky");
+        Barman barman = new Barman("Jack", "Hat Jack's");
 
         Dame dame1 = new Dame("Louise", "Thé");
         Dame dame2 = new Dame("Jeannine", "tysanne");
@@ -28,13 +30,23 @@ public class Histore {
         brigand.presenter();
         brigand.arreter(cowboy.getNom());
 
+        barman.parle();
+        barman.boire();
+        barman.presenter();
+
+        sherif.parle();
+
+        sherif.presenter();
+
+        sherif.traquer(brigand);
+        sherif.tirer(brigand.getNom(),dame1);
+        sherif.coffrer(brigand);
 
 
 
-        cowboy.parle();
-        cowboy.presenter();
-        cowboy.boire();
-        cowboy.tirer(brigand.getNom(), dame1);
+
+
+
 
 
     }

@@ -35,7 +35,7 @@ public class Humain {
 
     // Methode
     public void parle(){
-        System.out.println("nom sde l'humain : " + this.nom);
+        System.out.println("nom de l'humain : " + this.nom);
     }
 
     public void presenter(){
